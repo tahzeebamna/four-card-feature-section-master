@@ -1,0 +1,88 @@
+*{
+    box-sizing: border-box;
+}
+body{
+   color:hsl(234, 12%, 34%);
+   background-color: hsl(0, 0%, 98%);
+
+}
+header{
+    margin: 0 auto;
+    max-width: 500px;
+    text-align: center;
+
+}
+h1{
+    font-weight: 200;
+}
+h1 .strong{
+    font-weight: 600;
+}
+p{
+    color: hsl(229, 6%,66%);
+
+}
+.container{
+    margin: 0 auto;
+    display: flex;
+    max-width: 1120px;
+    flex-wrap: wrap;
+}
+.box{
+    background-color: hsl(0, 0%, 98%);
+    box-shadow:  0px 10px 20px rgba(0, 0, 0, 0.05), 0 6px 6px rgba(0, 0, 0, 0.01);
+    overflow: hidden;
+    position: relative;
+    border-radius: 5%;
+    margin: 15px auto;
+    padding: 30px;
+    width: 350px;
+    
+    
+}
+.box::after{
+    content:'';
+    background-color: purple;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 5px;
+    width:100%;
+}
+.box-red::after{
+    background-color: hsl(0, 78%, 62%);
+}
+.box-cyan::after{
+    background-color: hsl(180, 62%, 55%);
+}
+.box-orange::after{
+    background-color: hsl(34, 97%, 64%);
+}
+.box-blue::after{
+    background-color: hsl(212, 86%, 64%);
+}
+.box-push{
+    transform: translateY(50%);
+}
+
+.box h2{
+    margin:0%;
+}
+.box p{
+    font-size: 14px;
+    margin: 15px 0;
+}
+.box img{
+    display: block;
+    margin-left: auto;
+}
+@media (min-width:741px) and (max-width:1080){
+    .box{
+        margin: 0 -15px;
+    }
+}
+@media (max-width:740px){
+    .box-push{
+        transform: translateY(0%);
+    }
+}
